@@ -1,0 +1,82 @@
+/* styles.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centering the content */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Chessboard container */
+.container {
+    text-align: center;
+}
+
+/* Chessboard */
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 0;
+    width: 400px;
+    height: 400px;
+    border: 5px solid #333;
+}
+
+/* Square styles */
+.square {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* White and black square colors */
+.white {
+    background-color: #40E0D0; /* Turquoise */
+}
+
+.black {
+    background-color: #800020; /* Deep Burgundy */
+}
+
+/* Highlighted square when a piece is selected */
+.selected {
+    background-color: yellow;
+}
+
+/* Chess piece emoji styling */
+.piece {
+    font-size: 2rem;
+}
+
+/* For responsiveness */
+@media (max-width: 500px) {
+    .chessboard {
+        width: 300px;
+        height: 300px;
+    }
+}
